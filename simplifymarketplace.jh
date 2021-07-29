@@ -1,0 +1,256 @@
+
+
+entity Category {
+    categoryName CategoryType,
+    isParent Boolean,
+    isActive Boolean
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+
+}
+enum CategoryType{
+	Driver
+    Nurse
+    
+}
+relationship OneToMany {
+    Category to Category{parent}
+}
+
+entity Field {
+    fieldName String,
+    fieldLabel String,
+    fieldType FieldType,
+    isDeleted Boolean,
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+}
+
+enum FieldType {
+	String
+    Date
+    Integer
+    Rate
+    Email
+}
+
+relationship ManyToMany {
+    Field {category} to Category{field}
+}
+
+//Lets see if jhipster user table will work
+entity User {
+	userName String,
+    userType UserType,
+    userPassword String,
+    userVerified Boolean,
+    isActive Boolean,
+    userEmail String,
+    mobileNumber String,
+    isActive Boolean,
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+
+}
+
+enum UserType {
+	Admin,
+    Candidate,
+    Client
+}
+entity Client {
+    compName String,
+    compAddress String,
+    compWebsite String,
+    compType CompType,
+    compContactNo String,
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+
+}
+
+enum CompType {
+	IT,
+    Consultant,
+    Hospital,
+    MediaHouse
+}
+relationship OneToMany {
+    Client to User {id}
+}
+
+entity Worker {
+    name String,
+    email String,
+    phone Integer,
+    description String,
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+}
+
+entity Resume {
+    path String,
+    filetype FileType,
+    resumeTitle String,
+    isDefault Boolean,
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+}
+
+enum FileType {
+	PDF,
+    DOC,
+    PPT
+}
+relationship OneToMany {
+    Worker to Resume {id}
+}
+relationship OneToOne {
+    User to Worker {id}
+}
+entity JobPreference {
+    hourlyRate Integer,
+    dailyRate Integer,
+    monthlyRate Integer,
+    hourPerDay Integer,
+    hourPerWeek Integer,
+    engagementType EngagementType,
+    locationType LocationType,
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+}
+
+enum EngagementType {
+	FullTime,
+    Consultant,
+    Freelancer
+}
+
+enum LocationType {
+	Worklocation,
+    Homelocation
+}
+
+entity JobSpecificField {
+ value String
+}
+relationship OneToMany {
+    JobPreference to JobSpecificField {id},
+}
+
+
+relationship OneToMany {
+    Worker to JobPreference {id}
+}
+
+relationship OneToOne {
+    Category to JobPreference {id}
+}
+
+entity Location {
+	country String,
+    state String,
+    city String
+}
+
+entity LocationPrefrence {
+prefrenceOrder Integer
+}
+
+relationship OneToOne {
+    User to Location {id}
+}
+
+relationship OneToMany {
+    Worker to LocationPrefrence {id}
+}
+
+relationship OneToMany {
+    Client to Location {id}
+}
+
+entity Education {
+    degreeName String,
+    institute String,
+    yearOfPassing Integer,
+    marks Float,
+    startDate LocalDate,
+    endDate LocalDate,
+    degreeType DegreeType,
+    description String,
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+}
+
+enum DegreeType {
+	HSC,
+    Graduate,
+    PostGraduate,
+    Associate,
+    Doctrol,
+    Diploma
+}
+
+relationship OneToMany {
+    Worker to Education {id}
+}
+
+entity Employment {
+    jobTitle String,
+    companyName String,
+    startDate LocalDate,
+    endDate LocalDate,
+    lastSalary Integer,
+    description String,
+    category Category,
+    subCategory Category,
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+}
+relationship OneToMany {
+    Worker to Employment {id}
+}
+relationship ManyToMany {
+    Employment {id} to Location {id}
+}
+
+entity OTP {
+     otp Integer,
+    email String,
+    phone Integer,
+    type OtpType,
+    expiryTime LocalDate,
+    status OtpStatus,
+    createdBy String,
+    createdAt LocalDate,
+    updatedBy String,
+    updatedAt LocalDate
+}
+
+entity OTPAttempt {
+                otp Integer,
+    email String,
+    phone Integer,
+    ip String,
+    coookie String,
+    createdBy String,
+    createdAt LocalDate
+}
