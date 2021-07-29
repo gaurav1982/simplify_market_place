@@ -1,0 +1,31 @@
+{
+  "simplifyMarketplaceApp": {
+    "oTPAttempt": {
+      "home": {
+        "title": "OTP Attempts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new OTP Attempt",
+        "createOrEditLabel": "Create or edit a OTP Attempt",
+        "search": "Search for OTP Attempt",
+        "notFound": "No OTP Attempts found"
+      },
+      "created": "A new OTP Attempt is created with identifier {{ param }}",
+      "updated": "A OTP Attempt is updated with identifier {{ param }}",
+      "deleted": "A OTP Attempt is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete OTP Attempt {{ id }}?"
+      },
+      "detail": {
+        "title": "OTP Attempt"
+      },
+      "id": "ID",
+      "otp": "Otp",
+      "email": "Email",
+      "phone": "Phone",
+      "ip": "Ip",
+      "coookie": "Coookie",
+      "createdBy": "Created By",
+      "createdAt": "Created At"
+    }
+  }
+}

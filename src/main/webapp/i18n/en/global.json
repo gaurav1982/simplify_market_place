@@ -7,6 +7,18 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "category": "Category",
+        "client": "Client",
+        "worker": "Worker",
+        "resume": "Resume",
+        "jobPreference": "Job Preference",
+        "jobSpecificField": "Job Specific Field",
+        "location": "Location",
+        "locationPrefrence": "Location Prefrence",
+        "education": "Education",
+        "employment": "Employment",
+        "otp": "OTP",
+        "otpAttempt": "OTP Attempt",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

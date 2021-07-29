@@ -1,0 +1,26 @@
+{
+  "simplifyMarketplaceApp": {
+    "jobSpecificField": {
+      "home": {
+        "title": "Job Specific Fields",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Job Specific Field",
+        "createOrEditLabel": "Create or edit a Job Specific Field",
+        "search": "Search for Job Specific Field",
+        "notFound": "No Job Specific Fields found"
+      },
+      "created": "A new Job Specific Field is created with identifier {{ param }}",
+      "updated": "A Job Specific Field is updated with identifier {{ param }}",
+      "deleted": "A Job Specific Field is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Job Specific Field {{ id }}?"
+      },
+      "detail": {
+        "title": "Job Specific Field"
+      },
+      "id": "ID",
+      "value": "Value",
+      "id": "Id"
+    }
+  }
+}

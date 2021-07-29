@@ -1,0 +1,12 @@
+{
+  "simplifyMarketplaceApp": {
+    "FieldType": {
+      "null": "",
+      "String": "String",
+      "Date": "Date",
+      "Integer": "Integer",
+      "Rate": "Rate",
+      "Email": "Email"
+    }
+  }
+}

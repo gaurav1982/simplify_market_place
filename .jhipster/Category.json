@@ -1,0 +1,71 @@
+{
+  "name": "Category",
+  "fields": [
+    {
+      "fieldName": "categoryName",
+      "fieldType": "CategoryType",
+      "fieldValues": "Driver,Nurse"
+    },
+    {
+      "fieldName": "isParent",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "parent",
+      "relationshipName": "category"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "jobPreference",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "jobPreference"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "category",
+      "relationshipName": "parent"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "field",
+      "otherEntityRelationshipName": "category",
+      "relationshipName": "field",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "category",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210729120236"
+}

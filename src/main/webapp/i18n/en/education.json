@@ -1,0 +1,37 @@
+{
+  "simplifyMarketplaceApp": {
+    "education": {
+      "home": {
+        "title": "Educations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Education",
+        "createOrEditLabel": "Create or edit a Education",
+        "search": "Search for Education",
+        "notFound": "No Educations found"
+      },
+      "created": "A new Education is created with identifier {{ param }}",
+      "updated": "A Education is updated with identifier {{ param }}",
+      "deleted": "A Education is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Education {{ id }}?"
+      },
+      "detail": {
+        "title": "Education"
+      },
+      "id": "ID",
+      "degreeName": "Degree Name",
+      "institute": "Institute",
+      "yearOfPassing": "Year Of Passing",
+      "marks": "Marks",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "degreeType": "Degree Type",
+      "description": "Description",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "updatedBy": "Updated By",
+      "updatedAt": "Updated At",
+      "id": "Id"
+    }
+  }
+}

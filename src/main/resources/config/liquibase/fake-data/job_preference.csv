@@ -1,0 +1,11 @@
+id;hourly_rate;daily_rate;monthly_rate;hour_per_day;hour_per_week;engagement_type;location_type;created_by;created_at;updated_by;updated_at
+1;1631;19452;38621;16109;48333;Consultant;Homelocation;discrete;2021-07-29;Intelligent;2021-07-29
+2;37238;97154;31210;47079;85216;Consultant;Worklocation;success Granite parse;2021-07-29;collaboration;2021-07-29
+3;51456;17734;60969;67512;34862;Freelancer;Worklocation;architecture;2021-07-28;Rubber optical Executive;2021-07-29
+4;53817;30807;85550;69824;4920;Consultant;Worklocation;Checking;2021-07-29;Account;2021-07-28
+5;13969;11613;62066;3924;39552;FullTime;Worklocation;primary Account empower;2021-07-29;pixel mesh;2021-07-29
+6;94563;69835;5809;5494;22567;Freelancer;Worklocation;deposit;2021-07-28;bricks-and-clicks payment Program;2021-07-28
+7;84694;84652;72058;83298;97057;FullTime;Worklocation;McDonald;2021-07-28;PNG Michigan;2021-07-29
+8;39985;44244;7101;41994;44310;FullTime;Worklocation;Georgia Specialist;2021-07-28;Manager Pants cyan;2021-07-28
+9;28858;99917;22514;95020;78621;Freelancer;Homelocation;Wooden hard;2021-07-29;Vermont;2021-07-28
+10;66673;84323;43006;28409;88257;Consultant;Worklocation;cohesive Nakfa;2021-07-28;HTTP JBOD forecast;2021-07-29

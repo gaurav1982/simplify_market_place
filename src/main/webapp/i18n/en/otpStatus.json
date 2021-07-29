@@ -1,0 +1,10 @@
+{
+  "simplifyMarketplaceApp": {
+    "OtpStatus": {
+      "null": "",
+      "Pending": "Pending",
+      "Failed": "Failed",
+      "Approved": "Approved"
+    }
+  }
+}

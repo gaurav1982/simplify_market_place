@@ -1,0 +1,60 @@
+{
+  "name": "Client",
+  "fields": [
+    {
+      "fieldName": "compName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "compAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "compWebsite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "compType",
+      "fieldType": "CompType",
+      "fieldValues": "IT,Consultant,Hospital,MediaHouse"
+    },
+    {
+      "fieldName": "compContactNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "location"
+    }
+  ],
+  "entityTableName": "client",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210729120238"
+}
