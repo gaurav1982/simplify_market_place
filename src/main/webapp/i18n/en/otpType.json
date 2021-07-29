@@ -1,0 +1,9 @@
+{
+  "simplifyMarketplaceApp": {
+    "OtpType": {
+      "null": "",
+      "Email": "Email",
+      "Phone": "Phone"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "simplifyMarketplaceApp": {
+    "FileType": {
+      "null": "",
+      "PDF": "PDF",
+      "DOC": "DOC",
+      "PPT": "PPT"
+    }
+  }
+}

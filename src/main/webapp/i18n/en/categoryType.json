@@ -1,0 +1,9 @@
+{
+  "simplifyMarketplaceApp": {
+    "CategoryType": {
+      "null": "",
+      "Driver": "Driver",
+      "Nurse": "Nurse"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "name": "JobPreference",
+  "fields": [
+    {
+      "fieldName": "hourlyRate",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dailyRate",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "monthlyRate",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "hourPerDay",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "hourPerWeek",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "engagementType",
+      "fieldType": "EngagementType",
+      "fieldValues": "FullTime,Consultant,Freelancer"
+    },
+    {
+      "fieldName": "locationType",
+      "fieldType": "LocationType",
+      "fieldValues": "Worklocation,Homelocation"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "jobSpecificField",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "jobSpecificField"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "worker",
+      "otherEntityRelationshipName": "jobPreference",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "jobPreference",
+      "relationshipName": "id"
+    }
+  ],
+  "entityTableName": "job_preference",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210729120241"
+}

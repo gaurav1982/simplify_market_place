@@ -1,0 +1,26 @@
+{
+  "simplifyMarketplaceApp": {
+    "locationPrefrence": {
+      "home": {
+        "title": "Location Prefrences",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Location Prefrence",
+        "createOrEditLabel": "Create or edit a Location Prefrence",
+        "search": "Search for Location Prefrence",
+        "notFound": "No Location Prefrences found"
+      },
+      "created": "A new Location Prefrence is created with identifier {{ param }}",
+      "updated": "A Location Prefrence is updated with identifier {{ param }}",
+      "deleted": "A Location Prefrence is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Location Prefrence {{ id }}?"
+      },
+      "detail": {
+        "title": "Location Prefrence"
+      },
+      "id": "ID",
+      "prefrenceOrder": "Prefrence Order",
+      "id": "Id"
+    }
+  }
+}

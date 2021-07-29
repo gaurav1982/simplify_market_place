@@ -51,6 +51,32 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.User.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Authority.class.getName());
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.mycompany.myapp.domain.Category.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Category.class.getName() + ".categories");
+            createCache(cm, com.mycompany.myapp.domain.Category.class.getName() + ".jobPreferences");
+            createCache(cm, com.mycompany.myapp.domain.Category.class.getName() + ".fields");
+            createCache(cm, com.mycompany.myapp.domain.Field.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Field.class.getName() + ".categories");
+            createCache(cm, com.mycompany.myapp.domain.Client.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Client.class.getName() + ".locations");
+            createCache(cm, com.mycompany.myapp.domain.Worker.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Worker.class.getName() + ".resumes");
+            createCache(cm, com.mycompany.myapp.domain.Worker.class.getName() + ".jobPreferences");
+            createCache(cm, com.mycompany.myapp.domain.Worker.class.getName() + ".locationPrefrences");
+            createCache(cm, com.mycompany.myapp.domain.Worker.class.getName() + ".educations");
+            createCache(cm, com.mycompany.myapp.domain.Worker.class.getName() + ".employments");
+            createCache(cm, com.mycompany.myapp.domain.Resume.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.JobPreference.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.JobPreference.class.getName() + ".jobSpecificFields");
+            createCache(cm, com.mycompany.myapp.domain.JobSpecificField.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Location.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Location.class.getName() + ".ids");
+            createCache(cm, com.mycompany.myapp.domain.LocationPrefrence.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Education.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Employment.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Employment.class.getName() + ".ids");
+            createCache(cm, com.mycompany.myapp.domain.OTP.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.OTPAttempt.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

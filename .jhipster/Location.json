@@ -1,0 +1,42 @@
+{
+  "name": "Location",
+  "fields": [
+    {
+      "fieldName": "country",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "location",
+      "relationshipName": "id"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "employment",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "id",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "location",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210729120243"
+}

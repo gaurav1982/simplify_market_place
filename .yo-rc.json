@@ -43,7 +43,23 @@
     "devServerPort": 9060,
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "reactive": false
+    "reactive": false,
+    "entities": [
+      "Category",
+      "Field",
+      "Client",
+      "Worker",
+      "Resume",
+      "JobPreference",
+      "JobSpecificField",
+      "Location",
+      "LocationPrefrence",
+      "Education",
+      "Employment",
+      "OTP",
+      "OTPAttempt"
+    ],
+    "lastLiquibaseTimestamp": 1627560168000
   },
   "git-provider": "GitHub",
   "git-company": "gaurav1982",

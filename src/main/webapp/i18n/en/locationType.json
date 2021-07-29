@@ -1,0 +1,9 @@
+{
+  "simplifyMarketplaceApp": {
+    "LocationType": {
+      "null": "",
+      "Worklocation": "Worklocation",
+      "Homelocation": "Homelocation"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "simplifyMarketplaceApp": {
+    "EngagementType": {
+      "null": "",
+      "FullTime": "FullTime",
+      "Consultant": "Consultant",
+      "Freelancer": "Freelancer"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name": "Education",
+  "fields": [
+    {
+      "fieldName": "degreeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "institute",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "yearOfPassing",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "marks",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "degreeType",
+      "fieldType": "DegreeType",
+      "fieldValues": "HSC,Graduate,PostGraduate,Associate,Doctrol,Diploma"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "worker",
+      "otherEntityRelationshipName": "education",
+      "relationshipName": "id"
+    }
+  ],
+  "entityTableName": "education",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210729120245"
+}

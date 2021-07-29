@@ -1,0 +1,79 @@
+{
+  "name": "Worker",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "resume",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "resume"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "jobPreference",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "jobPreference"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "locationPrefrence",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "locationPrefrence"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "education",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "education"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "employment",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "employment"
+    }
+  ],
+  "entityTableName": "worker",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210729120239"
+}

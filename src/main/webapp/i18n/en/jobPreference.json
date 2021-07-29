@@ -1,0 +1,38 @@
+{
+  "simplifyMarketplaceApp": {
+    "jobPreference": {
+      "home": {
+        "title": "Job Preferences",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Job Preference",
+        "createOrEditLabel": "Create or edit a Job Preference",
+        "search": "Search for Job Preference",
+        "notFound": "No Job Preferences found"
+      },
+      "created": "A new Job Preference is created with identifier {{ param }}",
+      "updated": "A Job Preference is updated with identifier {{ param }}",
+      "deleted": "A Job Preference is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Job Preference {{ id }}?"
+      },
+      "detail": {
+        "title": "Job Preference"
+      },
+      "id": "ID",
+      "hourlyRate": "Hourly Rate",
+      "dailyRate": "Daily Rate",
+      "monthlyRate": "Monthly Rate",
+      "hourPerDay": "Hour Per Day",
+      "hourPerWeek": "Hour Per Week",
+      "engagementType": "Engagement Type",
+      "locationType": "Location Type",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "updatedBy": "Updated By",
+      "updatedAt": "Updated At",
+      "jobSpecificField": "Job Specific Field",
+      "id": "Id",
+      "id": "Id"
+    }
+  }
+}
