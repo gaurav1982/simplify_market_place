@@ -27,7 +27,7 @@
       "createdAt": "Created At",
       "updatedBy": "Updated By",
       "updatedAt": "Updated At",
-      "id": "Id"
+      "worker": "Worker"
     }
   }
 }

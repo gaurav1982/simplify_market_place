@@ -46,15 +46,15 @@
     {
       "relationshipType": "many-to-many",
       "otherEntityName": "location",
-      "otherEntityRelationshipName": "id",
-      "relationshipName": "id",
+      "otherEntityRelationshipName": "employment",
+      "relationshipName": "location",
       "ownerSide": true
     },
     {
       "relationshipType": "many-to-one",
       "otherEntityName": "worker",
       "otherEntityRelationshipName": "employment",
-      "relationshipName": "id"
+      "relationshipName": "worker"
     }
   ],
   "entityTableName": "employment",

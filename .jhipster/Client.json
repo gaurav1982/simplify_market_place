@@ -43,7 +43,7 @@
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "location",
-      "otherEntityRelationshipName": "id",
+      "otherEntityRelationshipName": "client",
       "relationshipName": "location"
     }
   ],

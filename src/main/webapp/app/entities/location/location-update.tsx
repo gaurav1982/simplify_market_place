@@ -51,7 +51,7 @@ export const LocationUpdate = (props: RouteComponentProps<{ id: string }>) => {
     const entity = {
       ...locationEntity,
       ...values,
-      id: clients.find(it => it.id.toString() === values.idId.toString()),
+      client: clients.find(it => it.id.toString() === values.clientId.toString()),
     };
 
     if (isNew) {
@@ -66,7 +66,7 @@ export const LocationUpdate = (props: RouteComponentProps<{ id: string }>) => {
       ? {}
       : {
           ...locationEntity,
-          idId: locationEntity?.id?.id,
+          clientId: locationEntity?.client?.id,
         };
 
   return (
@@ -116,10 +116,10 @@ export const LocationUpdate = (props: RouteComponentProps<{ id: string }>) => {
                 type="text"
               />
               <ValidatedField
-                id="location-id"
-                name="idId"
-                data-cy="id"
-                label={translate('simplifyMarketplaceApp.location.id')}
+                id="location-client"
+                name="clientId"
+                data-cy="client"
+                label={translate('simplifyMarketplaceApp.location.client')}
                 type="select"
               >
                 <option value="" key="0" />

@@ -8,15 +8,15 @@
     -->
     <changeSet id="20210729120241-2" author="jhipster">
 
-        <addForeignKeyConstraint baseColumnNames="id_id"
+        <addForeignKeyConstraint baseColumnNames="worker_id"
                                  baseTableName="job_preference"
-                                 constraintName="fk_job_preference__id_id"
+                                 constraintName="fk_job_preference__worker_id"
                                  referencedColumnNames="id"
                                  referencedTableName="worker"/>
 
-        <addForeignKeyConstraint baseColumnNames="id_id"
+        <addForeignKeyConstraint baseColumnNames="category_id"
                                  baseTableName="job_preference"
-                                 constraintName="fk_job_preference__id_id"
+                                 constraintName="fk_job_preference__category_id"
                                  referencedColumnNames="id"
                                  referencedTableName="category"/>
     </changeSet>

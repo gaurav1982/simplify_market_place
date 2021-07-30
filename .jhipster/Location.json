@@ -19,13 +19,13 @@
       "relationshipType": "many-to-one",
       "otherEntityName": "client",
       "otherEntityRelationshipName": "location",
-      "relationshipName": "id"
+      "relationshipName": "client"
     },
     {
       "relationshipType": "many-to-many",
       "otherEntityName": "employment",
-      "otherEntityRelationshipName": "id",
-      "relationshipName": "id",
+      "otherEntityRelationshipName": "location",
+      "relationshipName": "employment",
       "ownerSide": false
     }
   ],

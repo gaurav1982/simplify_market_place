@@ -10,8 +10,8 @@
     {
       "relationshipType": "many-to-one",
       "otherEntityName": "worker",
-      "otherEntityRelationshipName": "locationPrefrence",
-      "relationshipName": "id"
+      "otherEntityRelationshipName": "locationprefrence",
+      "relationshipName": "worker"
     }
   ],
   "entityTableName": "location_prefrence",

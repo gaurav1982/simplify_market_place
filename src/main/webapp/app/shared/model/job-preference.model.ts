@@ -18,9 +18,9 @@ export interface IJobPreference {
   createdAt?: string | null;
   updatedBy?: string | null;
   updatedAt?: string | null;
-  jobSpecificFields?: IJobSpecificField[] | null;
-  id?: IWorker | null;
-  id?: ICategory | null;
+  jobspecificfields?: IJobSpecificField[] | null;
+  worker?: IWorker | null;
+  category?: ICategory | null;
 }
 
 export const defaultValue: Readonly<IJobPreference> = {};

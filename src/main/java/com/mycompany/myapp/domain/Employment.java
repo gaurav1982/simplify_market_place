@@ -58,16 +58,16 @@ public class Employment implements Serializable {
     @ManyToMany
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JoinTable(
-        name = "rel_employment__id",
+        name = "rel_employment__location",
         joinColumns = @JoinColumn(name = "employment_id"),
-        inverseJoinColumns = @JoinColumn(name = "id_id")
+        inverseJoinColumns = @JoinColumn(name = "location_id")
     )
-    @JsonIgnoreProperties(value = { "id", "ids" }, allowSetters = true)
-    private Set<Location> ids = new HashSet<>();
+    @JsonIgnoreProperties(value = { "client", "employments" }, allowSetters = true)
+    private Set<Location> locations = new HashSet<>();
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "resumes", "jobPreferences", "locationPrefrences", "educations", "employments" }, allowSetters = true)
-    private Worker id;
+    @JsonIgnoreProperties(value = { "resumes", "jobprefrences", "locationprefrences", "educations", "employments" }, allowSetters = true)
+    private Worker worker;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -213,42 +213,42 @@ public class Employment implements Serializable {
         this.updatedAt = updatedAt;
     }
 
-    public Set<Location> getIds() {
-        return this.ids;
+    public Set<Location> getLocations() {
+        return this.locations;
     }
 
-    public Employment ids(Set<Location> locations) {
-        this.setIds(locations);
+    public Employment locations(Set<Location> locations) {
+        this.setLocations(locations);
         return this;
     }
 
-    public Employment addId(Location location) {
-        this.ids.add(location);
-        location.getIds().add(this);
+    public Employment addLocation(Location location) {
+        this.locations.add(location);
+        location.getEmployments().add(this);
         return this;
     }
 
-    public Employment removeId(Location location) {
-        this.ids.remove(location);
-        location.getIds().remove(this);
+    public Employment removeLocation(Location location) {
+        this.locations.remove(location);
+        location.getEmployments().remove(this);
         return this;
     }
 
-    public void setIds(Set<Location> locations) {
-        this.ids = locations;
+    public void setLocations(Set<Location> locations) {
+        this.locations = locations;
     }
 
-    public Worker getId() {
-        return this.id;
+    public Worker getWorker() {
+        return this.worker;
     }
 
-    public Employment id(Worker worker) {
-        this.setId(worker);
+    public Employment worker(Worker worker) {
+        this.setWorker(worker);
         return this;
     }
 
-    public void setId(Worker worker) {
-        this.id = worker;
+    public void setWorker(Worker worker) {
+        this.worker = worker;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

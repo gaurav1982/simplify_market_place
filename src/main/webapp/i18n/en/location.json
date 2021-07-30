@@ -22,8 +22,8 @@
       "country": "Country",
       "state": "State",
       "city": "City",
-      "id": "Id",
-      "id": "Id"
+      "client": "Client",
+      "employment": "Employment"
     }
   }
 }

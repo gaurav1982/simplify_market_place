@@ -30,9 +30,9 @@
       "createdAt": "Created At",
       "updatedBy": "Updated By",
       "updatedAt": "Updated At",
-      "jobSpecificField": "Job Specific Field",
-      "id": "Id",
-      "id": "Id"
+      "jobspecificfield": "Jobspecificfield",
+      "worker": "Worker",
+      "category": "Category"
     }
   }
 }

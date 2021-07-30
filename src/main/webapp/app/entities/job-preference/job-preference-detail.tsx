@@ -104,13 +104,13 @@ export const JobPreferenceDetail = (props: RouteComponentProps<{ id: string }>) 
             ) : null}
           </dd>
           <dt>
-            <Translate contentKey="simplifyMarketplaceApp.jobPreference.id">Id</Translate>
+            <Translate contentKey="simplifyMarketplaceApp.jobPreference.worker">Worker</Translate>
           </dt>
-          <dd>{jobPreferenceEntity.id ? jobPreferenceEntity.id.id : ''}</dd>
+          <dd>{jobPreferenceEntity.worker ? jobPreferenceEntity.worker.id : ''}</dd>
           <dt>
-            <Translate contentKey="simplifyMarketplaceApp.jobPreference.id">Id</Translate>
+            <Translate contentKey="simplifyMarketplaceApp.jobPreference.category">Category</Translate>
           </dt>
-          <dd>{jobPreferenceEntity.id ? jobPreferenceEntity.id.id : ''}</dd>
+          <dd>{jobPreferenceEntity.category ? jobPreferenceEntity.category.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/job-preference" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

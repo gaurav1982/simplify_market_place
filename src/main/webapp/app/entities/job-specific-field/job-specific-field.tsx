@@ -92,7 +92,7 @@ export const JobSpecificField = (props: RouteComponentProps<{ url: string }>) =>
                   <Translate contentKey="simplifyMarketplaceApp.jobSpecificField.value">Value</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="simplifyMarketplaceApp.jobSpecificField.id">Id</Translate>
+                  <Translate contentKey="simplifyMarketplaceApp.jobSpecificField.jobpreference">Jobpreference</Translate>
                 </th>
                 <th />
               </tr>
@@ -107,7 +107,11 @@ export const JobSpecificField = (props: RouteComponentProps<{ url: string }>) =>
                   </td>
                   <td>{jobSpecificField.value}</td>
                   <td>
-                    {jobSpecificField.id ? <Link to={`job-preference/${jobSpecificField.id.id}`}>{jobSpecificField.id.id}</Link> : ''}
+                    {jobSpecificField.jobpreference ? (
+                      <Link to={`job-preference/${jobSpecificField.jobpreference.id}`}>{jobSpecificField.jobpreference.id}</Link>
+                    ) : (
+                      ''
+                    )}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

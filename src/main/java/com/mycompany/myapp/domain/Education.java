@@ -62,8 +62,8 @@ public class Education implements Serializable {
     private LocalDate updatedAt;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "resumes", "jobPreferences", "locationPrefrences", "educations", "employments" }, allowSetters = true)
-    private Worker id;
+    @JsonIgnoreProperties(value = { "resumes", "jobprefrences", "locationprefrences", "educations", "employments" }, allowSetters = true)
+    private Worker worker;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -235,17 +235,17 @@ public class Education implements Serializable {
         this.updatedAt = updatedAt;
     }
 
-    public Worker getId() {
-        return this.id;
+    public Worker getWorker() {
+        return this.worker;
     }
 
-    public Education id(Worker worker) {
-        this.setId(worker);
+    public Education worker(Worker worker) {
+        this.setWorker(worker);
         return this;
     }
 
-    public void setId(Worker worker) {
-        this.id = worker;
+    public void setWorker(Worker worker) {
+        this.worker = worker;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

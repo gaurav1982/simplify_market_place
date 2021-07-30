@@ -47,7 +47,7 @@ export const EducationUpdate = (props: RouteComponentProps<{ id: string }>) => {
     const entity = {
       ...educationEntity,
       ...values,
-      id: workers.find(it => it.id.toString() === values.idId.toString()),
+      worker: workers.find(it => it.id.toString() === values.workerId.toString()),
     };
 
     if (isNew) {
@@ -63,7 +63,7 @@ export const EducationUpdate = (props: RouteComponentProps<{ id: string }>) => {
       : {
           ...educationEntity,
           degreeType: 'HSC',
-          idId: educationEntity?.id?.id,
+          workerId: educationEntity?.worker?.id,
         };
 
   return (
@@ -183,10 +183,10 @@ export const EducationUpdate = (props: RouteComponentProps<{ id: string }>) => {
                 type="date"
               />
               <ValidatedField
-                id="education-id"
-                name="idId"
-                data-cy="id"
-                label={translate('simplifyMarketplaceApp.education.id')}
+                id="education-worker"
+                name="workerId"
+                data-cy="worker"
+                label={translate('simplifyMarketplaceApp.education.worker')}
                 type="select"
               >
                 <option value="" key="0" />

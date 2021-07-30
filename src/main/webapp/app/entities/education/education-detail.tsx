@@ -110,9 +110,9 @@ export const EducationDetail = (props: RouteComponentProps<{ id: string }>) => {
             {educationEntity.updatedAt ? <TextFormat value={educationEntity.updatedAt} type="date" format={APP_LOCAL_DATE_FORMAT} /> : null}
           </dd>
           <dt>
-            <Translate contentKey="simplifyMarketplaceApp.education.id">Id</Translate>
+            <Translate contentKey="simplifyMarketplaceApp.education.worker">Worker</Translate>
           </dt>
-          <dd>{educationEntity.id ? educationEntity.id.id : ''}</dd>
+          <dd>{educationEntity.worker ? educationEntity.worker.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/education" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

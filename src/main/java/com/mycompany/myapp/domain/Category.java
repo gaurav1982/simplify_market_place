@@ -50,16 +50,16 @@ public class Category implements Serializable {
 
     @OneToMany(mappedBy = "parent")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "categories", "jobPreferences", "parent", "fields" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "categories", "jobprefrences", "parent", "fields" }, allowSetters = true)
     private Set<Category> categories = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "category")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "jobSpecificFields", "id", "id" }, allowSetters = true)
-    private Set<JobPreference> jobPreferences = new HashSet<>();
+    @JsonIgnoreProperties(value = { "jobspecificfields", "worker", "category" }, allowSetters = true)
+    private Set<JobPreference> jobprefrences = new HashSet<>();
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "categories", "jobPreferences", "parent", "fields" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "categories", "jobprefrences", "parent", "fields" }, allowSetters = true)
     private Category parent;
 
     @ManyToMany(mappedBy = "categories")
@@ -203,35 +203,35 @@ public class Category implements Serializable {
         this.categories = categories;
     }
 
-    public Set<JobPreference> getJobPreferences() {
-        return this.jobPreferences;
+    public Set<JobPreference> getJobprefrences() {
+        return this.jobprefrences;
     }
 
-    public Category jobPreferences(Set<JobPreference> jobPreferences) {
-        this.setJobPreferences(jobPreferences);
+    public Category jobprefrences(Set<JobPreference> jobPreferences) {
+        this.setJobprefrences(jobPreferences);
         return this;
     }
 
-    public Category addJobPreference(JobPreference jobPreference) {
-        this.jobPreferences.add(jobPreference);
-        jobPreference.setId(this);
+    public Category addJobprefrence(JobPreference jobPreference) {
+        this.jobprefrences.add(jobPreference);
+        jobPreference.setCategory(this);
         return this;
     }
 
-    public Category removeJobPreference(JobPreference jobPreference) {
-        this.jobPreferences.remove(jobPreference);
-        jobPreference.setId(null);
+    public Category removeJobprefrence(JobPreference jobPreference) {
+        this.jobprefrences.remove(jobPreference);
+        jobPreference.setCategory(null);
         return this;
     }
 
-    public void setJobPreferences(Set<JobPreference> jobPreferences) {
-        if (this.jobPreferences != null) {
-            this.jobPreferences.forEach(i -> i.setId(null));
+    public void setJobprefrences(Set<JobPreference> jobPreferences) {
+        if (this.jobprefrences != null) {
+            this.jobprefrences.forEach(i -> i.setCategory(null));
         }
         if (jobPreferences != null) {
-            jobPreferences.forEach(i -> i.setId(this));
+            jobPreferences.forEach(i -> i.setCategory(this));
         }
-        this.jobPreferences = jobPreferences;
+        this.jobprefrences = jobPreferences;
     }
 
     public Category getParent() {

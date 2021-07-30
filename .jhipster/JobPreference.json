@@ -52,20 +52,20 @@
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "jobSpecificField",
-      "otherEntityRelationshipName": "id",
-      "relationshipName": "jobSpecificField"
+      "otherEntityRelationshipName": "jobpreference",
+      "relationshipName": "jobspecificfield"
     },
     {
       "relationshipType": "many-to-one",
       "otherEntityName": "worker",
-      "otherEntityRelationshipName": "jobPreference",
-      "relationshipName": "id"
+      "otherEntityRelationshipName": "jobprefrence",
+      "relationshipName": "worker"
     },
     {
       "relationshipType": "many-to-one",
       "otherEntityName": "category",
-      "otherEntityRelationshipName": "jobPreference",
-      "relationshipName": "id"
+      "otherEntityRelationshipName": "jobprefrence",
+      "relationshipName": "category"
     }
   ],
   "entityTableName": "job_preference",

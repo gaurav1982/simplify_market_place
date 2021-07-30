@@ -13,7 +13,7 @@ export interface ICategory {
   updatedBy?: string | null;
   updatedAt?: string | null;
   categories?: ICategory[] | null;
-  jobPreferences?: IJobPreference[] | null;
+  jobprefrences?: IJobPreference[] | null;
   parent?: ICategory | null;
   fields?: IField[] | null;
 }

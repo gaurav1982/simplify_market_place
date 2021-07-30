@@ -36,9 +36,9 @@ export const JobSpecificFieldDetail = (props: RouteComponentProps<{ id: string }
           </dt>
           <dd>{jobSpecificFieldEntity.value}</dd>
           <dt>
-            <Translate contentKey="simplifyMarketplaceApp.jobSpecificField.id">Id</Translate>
+            <Translate contentKey="simplifyMarketplaceApp.jobSpecificField.jobpreference">Jobpreference</Translate>
           </dt>
-          <dd>{jobSpecificFieldEntity.id ? jobSpecificFieldEntity.id.id : ''}</dd>
+          <dd>{jobSpecificFieldEntity.jobpreference ? jobSpecificFieldEntity.jobpreference.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/job-specific-field" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

@@ -10,8 +10,8 @@
     {
       "relationshipType": "many-to-one",
       "otherEntityName": "jobPreference",
-      "otherEntityRelationshipName": "jobSpecificField",
-      "relationshipName": "id"
+      "otherEntityRelationshipName": "jobspecificfield",
+      "relationshipName": "jobpreference"
     }
   ],
   "entityTableName": "job_specific_field",

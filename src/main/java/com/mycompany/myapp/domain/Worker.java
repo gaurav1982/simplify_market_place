@@ -49,29 +49,29 @@ public class Worker implements Serializable {
     @Column(name = "updated_at")
     private LocalDate updatedAt;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "worker")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "id" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "worker" }, allowSetters = true)
     private Set<Resume> resumes = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "worker")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "jobSpecificFields", "id", "id" }, allowSetters = true)
-    private Set<JobPreference> jobPreferences = new HashSet<>();
+    @JsonIgnoreProperties(value = { "jobspecificfields", "worker", "category" }, allowSetters = true)
+    private Set<JobPreference> jobprefrences = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "worker")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "id" }, allowSetters = true)
-    private Set<LocationPrefrence> locationPrefrences = new HashSet<>();
+    @JsonIgnoreProperties(value = { "worker" }, allowSetters = true)
+    private Set<LocationPrefrence> locationprefrences = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "worker")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "id" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "worker" }, allowSetters = true)
     private Set<Education> educations = new HashSet<>();
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "worker")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "ids", "id" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "locations", "worker" }, allowSetters = true)
     private Set<Employment> employments = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
@@ -203,86 +203,86 @@ public class Worker implements Serializable {
 
     public Worker addResume(Resume resume) {
         this.resumes.add(resume);
-        resume.setId(this);
+        resume.setWorker(this);
         return this;
     }
 
     public Worker removeResume(Resume resume) {
         this.resumes.remove(resume);
-        resume.setId(null);
+        resume.setWorker(null);
         return this;
     }
 
     public void setResumes(Set<Resume> resumes) {
         if (this.resumes != null) {
-            this.resumes.forEach(i -> i.setId(null));
+            this.resumes.forEach(i -> i.setWorker(null));
         }
         if (resumes != null) {
-            resumes.forEach(i -> i.setId(this));
+            resumes.forEach(i -> i.setWorker(this));
         }
         this.resumes = resumes;
     }
 
-    public Set<JobPreference> getJobPreferences() {
-        return this.jobPreferences;
+    public Set<JobPreference> getJobprefrences() {
+        return this.jobprefrences;
     }
 
-    public Worker jobPreferences(Set<JobPreference> jobPreferences) {
-        this.setJobPreferences(jobPreferences);
+    public Worker jobprefrences(Set<JobPreference> jobPreferences) {
+        this.setJobprefrences(jobPreferences);
         return this;
     }
 
-    public Worker addJobPreference(JobPreference jobPreference) {
-        this.jobPreferences.add(jobPreference);
-        jobPreference.setId(this);
+    public Worker addJobprefrence(JobPreference jobPreference) {
+        this.jobprefrences.add(jobPreference);
+        jobPreference.setWorker(this);
         return this;
     }
 
-    public Worker removeJobPreference(JobPreference jobPreference) {
-        this.jobPreferences.remove(jobPreference);
-        jobPreference.setId(null);
+    public Worker removeJobprefrence(JobPreference jobPreference) {
+        this.jobprefrences.remove(jobPreference);
+        jobPreference.setWorker(null);
         return this;
     }
 
-    public void setJobPreferences(Set<JobPreference> jobPreferences) {
-        if (this.jobPreferences != null) {
-            this.jobPreferences.forEach(i -> i.setId(null));
+    public void setJobprefrences(Set<JobPreference> jobPreferences) {
+        if (this.jobprefrences != null) {
+            this.jobprefrences.forEach(i -> i.setWorker(null));
         }
         if (jobPreferences != null) {
-            jobPreferences.forEach(i -> i.setId(this));
+            jobPreferences.forEach(i -> i.setWorker(this));
         }
-        this.jobPreferences = jobPreferences;
+        this.jobprefrences = jobPreferences;
     }
 
-    public Set<LocationPrefrence> getLocationPrefrences() {
-        return this.locationPrefrences;
+    public Set<LocationPrefrence> getLocationprefrences() {
+        return this.locationprefrences;
     }
 
-    public Worker locationPrefrences(Set<LocationPrefrence> locationPrefrences) {
-        this.setLocationPrefrences(locationPrefrences);
+    public Worker locationprefrences(Set<LocationPrefrence> locationPrefrences) {
+        this.setLocationprefrences(locationPrefrences);
         return this;
     }
 
-    public Worker addLocationPrefrence(LocationPrefrence locationPrefrence) {
-        this.locationPrefrences.add(locationPrefrence);
-        locationPrefrence.setId(this);
+    public Worker addLocationprefrence(LocationPrefrence locationPrefrence) {
+        this.locationprefrences.add(locationPrefrence);
+        locationPrefrence.setWorker(this);
         return this;
     }
 
-    public Worker removeLocationPrefrence(LocationPrefrence locationPrefrence) {
-        this.locationPrefrences.remove(locationPrefrence);
-        locationPrefrence.setId(null);
+    public Worker removeLocationprefrence(LocationPrefrence locationPrefrence) {
+        this.locationprefrences.remove(locationPrefrence);
+        locationPrefrence.setWorker(null);
         return this;
     }
 
-    public void setLocationPrefrences(Set<LocationPrefrence> locationPrefrences) {
-        if (this.locationPrefrences != null) {
-            this.locationPrefrences.forEach(i -> i.setId(null));
+    public void setLocationprefrences(Set<LocationPrefrence> locationPrefrences) {
+        if (this.locationprefrences != null) {
+            this.locationprefrences.forEach(i -> i.setWorker(null));
         }
         if (locationPrefrences != null) {
-            locationPrefrences.forEach(i -> i.setId(this));
+            locationPrefrences.forEach(i -> i.setWorker(this));
         }
-        this.locationPrefrences = locationPrefrences;
+        this.locationprefrences = locationPrefrences;
     }
 
     public Set<Education> getEducations() {
@@ -296,22 +296,22 @@ public class Worker implements Serializable {
 
     public Worker addEducation(Education education) {
         this.educations.add(education);
-        education.setId(this);
+        education.setWorker(this);
         return this;
     }
 
     public Worker removeEducation(Education education) {
         this.educations.remove(education);
-        education.setId(null);
+        education.setWorker(null);
         return this;
     }
 
     public void setEducations(Set<Education> educations) {
         if (this.educations != null) {
-            this.educations.forEach(i -> i.setId(null));
+            this.educations.forEach(i -> i.setWorker(null));
         }
         if (educations != null) {
-            educations.forEach(i -> i.setId(this));
+            educations.forEach(i -> i.setWorker(this));
         }
         this.educations = educations;
     }
@@ -327,22 +327,22 @@ public class Worker implements Serializable {
 
     public Worker addEmployment(Employment employment) {
         this.employments.add(employment);
-        employment.setId(this);
+        employment.setWorker(this);
         return this;
     }
 
     public Worker removeEmployment(Employment employment) {
         this.employments.remove(employment);
-        employment.setId(null);
+        employment.setWorker(null);
         return this;
     }
 
     public void setEmployments(Set<Employment> employments) {
         if (this.employments != null) {
-            this.employments.forEach(i -> i.setId(null));
+            this.employments.forEach(i -> i.setWorker(null));
         }
         if (employments != null) {
-            employments.forEach(i -> i.setId(this));
+            employments.forEach(i -> i.setWorker(this));
         }
         this.employments = employments;
     }

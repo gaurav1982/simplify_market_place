@@ -16,7 +16,7 @@ export interface IEducation {
   createdAt?: string | null;
   updatedBy?: string | null;
   updatedAt?: string | null;
-  id?: IWorker | null;
+  worker?: IWorker | null;
 }
 
 export const defaultValue: Readonly<IEducation> = {};

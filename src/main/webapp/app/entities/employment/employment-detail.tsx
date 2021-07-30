@@ -104,22 +104,22 @@ export const EmploymentDetail = (props: RouteComponentProps<{ id: string }>) => 
             ) : null}
           </dd>
           <dt>
-            <Translate contentKey="simplifyMarketplaceApp.employment.id">Id</Translate>
+            <Translate contentKey="simplifyMarketplaceApp.employment.location">Location</Translate>
           </dt>
           <dd>
-            {employmentEntity.ids
-              ? employmentEntity.ids.map((val, i) => (
+            {employmentEntity.locations
+              ? employmentEntity.locations.map((val, i) => (
                   <span key={val.id}>
                     <a>{val.id}</a>
-                    {employmentEntity.ids && i === employmentEntity.ids.length - 1 ? '' : ', '}
+                    {employmentEntity.locations && i === employmentEntity.locations.length - 1 ? '' : ', '}
                   </span>
                 ))
               : null}
           </dd>
           <dt>
-            <Translate contentKey="simplifyMarketplaceApp.employment.id">Id</Translate>
+            <Translate contentKey="simplifyMarketplaceApp.employment.worker">Worker</Translate>
           </dt>
-          <dd>{employmentEntity.id ? employmentEntity.id.id : ''}</dd>
+          <dd>{employmentEntity.worker ? employmentEntity.worker.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/employment" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

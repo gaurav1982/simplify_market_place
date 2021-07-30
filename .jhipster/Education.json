@@ -56,7 +56,7 @@
       "relationshipType": "many-to-one",
       "otherEntityName": "worker",
       "otherEntityRelationshipName": "education",
-      "relationshipName": "id"
+      "relationshipName": "worker"
     }
   ],
   "entityTableName": "education",

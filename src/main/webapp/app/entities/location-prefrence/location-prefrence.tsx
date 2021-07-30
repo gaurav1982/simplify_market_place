@@ -92,7 +92,7 @@ export const LocationPrefrence = (props: RouteComponentProps<{ url: string }>) =
                   <Translate contentKey="simplifyMarketplaceApp.locationPrefrence.prefrenceOrder">Prefrence Order</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="simplifyMarketplaceApp.locationPrefrence.id">Id</Translate>
+                  <Translate contentKey="simplifyMarketplaceApp.locationPrefrence.worker">Worker</Translate>
                 </th>
                 <th />
               </tr>
@@ -106,7 +106,13 @@ export const LocationPrefrence = (props: RouteComponentProps<{ url: string }>) =
                     </Button>
                   </td>
                   <td>{locationPrefrence.prefrenceOrder}</td>
-                  <td>{locationPrefrence.id ? <Link to={`worker/${locationPrefrence.id.id}`}>{locationPrefrence.id.id}</Link> : ''}</td>
+                  <td>
+                    {locationPrefrence.worker ? (
+                      <Link to={`worker/${locationPrefrence.worker.id}`}>{locationPrefrence.worker.id}</Link>
+                    ) : (
+                      ''
+                    )}
+                  </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${locationPrefrence.id}`} color="info" size="sm" data-cy="entityDetailsButton">

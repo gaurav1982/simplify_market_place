@@ -6,8 +6,8 @@ export interface ILocation {
   country?: string | null;
   state?: string | null;
   city?: string | null;
-  id?: IClient | null;
-  ids?: IEmployment[] | null;
+  client?: IClient | null;
+  employments?: IEmployment[] | null;
 }
 
 export const defaultValue: Readonly<ILocation> = {};

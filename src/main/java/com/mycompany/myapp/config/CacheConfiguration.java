@@ -77,6 +77,12 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.Employment.class.getName() + ".ids");
             createCache(cm, com.mycompany.myapp.domain.OTP.class.getName());
             createCache(cm, com.mycompany.myapp.domain.OTPAttempt.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Category.class.getName() + ".jobprefrences");
+            createCache(cm, com.mycompany.myapp.domain.Worker.class.getName() + ".jobprefrences");
+            createCache(cm, com.mycompany.myapp.domain.Worker.class.getName() + ".locationprefrences");
+            createCache(cm, com.mycompany.myapp.domain.JobPreference.class.getName() + ".jobspecificfields");
+            createCache(cm, com.mycompany.myapp.domain.Location.class.getName() + ".employments");
+            createCache(cm, com.mycompany.myapp.domain.Employment.class.getName() + ".locations");
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -41,8 +41,8 @@
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "jobPreference",
-      "otherEntityRelationshipName": "id",
-      "relationshipName": "jobPreference"
+      "otherEntityRelationshipName": "category",
+      "relationshipName": "jobprefrence"
     },
     {
       "relationshipType": "many-to-one",
