@@ -1,7 +1,7 @@
 package com.mycompany.myapp.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.mycompany.myapp.domain.enumeration.FieldType;
+import com.mycompany.myapp.domain.enumeration.FieldType1;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -34,7 +34,7 @@ public class Field implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "field_type")
-    private FieldType fieldType;
+    private FieldType1 fieldType;
 
     @Column(name = "is_deleted")
     private Boolean isDeleted;
@@ -101,16 +101,16 @@ public class Field implements Serializable {
         this.fieldLabel = fieldLabel;
     }
 
-    public FieldType getFieldType() {
+    public FieldType1 getFieldType() {
         return this.fieldType;
     }
 
-    public Field fieldType(FieldType fieldType) {
+    public Field fieldType(FieldType1 fieldType) {
         this.fieldType = fieldType;
         return this;
     }
 
-    public void setFieldType(FieldType fieldType) {
+    public void setFieldType(FieldType1 fieldType) {
         this.fieldType = fieldType;
     }
 

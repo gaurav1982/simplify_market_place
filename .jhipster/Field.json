@@ -11,7 +11,7 @@
     },
     {
       "fieldName": "fieldType",
-      "fieldType": "FieldType",
+      "fieldType": "FieldType1",
       "fieldValues": "Text,Date,Number,Rate,Email"
     },
     {

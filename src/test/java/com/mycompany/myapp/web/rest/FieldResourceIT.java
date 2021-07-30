@@ -9,7 +9,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.mycompany.myapp.IntegrationTest;
 import com.mycompany.myapp.domain.Field;
-import com.mycompany.myapp.domain.enumeration.FieldType;
+import com.mycompany.myapp.domain.enumeration.FieldType1;
 import com.mycompany.myapp.repository.FieldRepository;
 import com.mycompany.myapp.repository.search.FieldSearchRepository;
 import java.time.LocalDate;
@@ -49,8 +49,8 @@ class FieldResourceIT {
     private static final String DEFAULT_FIELD_LABEL = "AAAAAAAAAA";
     private static final String UPDATED_FIELD_LABEL = "BBBBBBBBBB";
 
-    private static final FieldType DEFAULT_FIELD_TYPE = FieldType.Text;
-    private static final FieldType UPDATED_FIELD_TYPE = FieldType.Date;
+    private static final FieldType1 DEFAULT_FIELD_TYPE = FieldType1.Text;
+    private static final FieldType1 UPDATED_FIELD_TYPE = FieldType1.Date;
 
     private static final Boolean DEFAULT_IS_DELETED = false;
     private static final Boolean UPDATED_IS_DELETED = true;
