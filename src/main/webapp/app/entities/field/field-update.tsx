@@ -112,11 +112,11 @@ export const FieldUpdate = (props: RouteComponentProps<{ id: string }>) => {
                 data-cy="fieldType"
                 type="select"
               >
-                <option value="Text">{translate('simplifyMarketplaceApp.FieldType.Text')}</option>
-                <option value="Date">{translate('simplifyMarketplaceApp.FieldType.Date')}</option>
-                <option value="Number">{translate('simplifyMarketplaceApp.FieldType.Number')}</option>
-                <option value="Rate">{translate('simplifyMarketplaceApp.FieldType.Rate')}</option>
-                <option value="Email">{translate('simplifyMarketplaceApp.FieldType.Email')}</option>
+                <option value="Text">{translate('simplifyMarketplaceApp.FieldType1.Text')}</option>
+                <option value="Date">{translate('simplifyMarketplaceApp.FieldType1.Date')}</option>
+                <option value="Number">{translate('simplifyMarketplaceApp.FieldType1.Number')}</option>
+                <option value="Rate">{translate('simplifyMarketplaceApp.FieldType1.Rate')}</option>
+                <option value="Email">{translate('simplifyMarketplaceApp.FieldType1.Email')}</option>
               </ValidatedField>
               <ValidatedField
                 label={translate('simplifyMarketplaceApp.field.isDeleted')}

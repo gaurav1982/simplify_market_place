@@ -129,7 +129,7 @@ export const Field = (props: RouteComponentProps<{ url: string }>) => {
                   <td>{field.fieldName}</td>
                   <td>{field.fieldLabel}</td>
                   <td>
-                    <Translate contentKey={`simplifyMarketplaceApp.FieldType.${field.fieldType}`} />
+                    <Translate contentKey={`simplifyMarketplaceApp.FieldType1.${field.fieldType}`} />
                   </td>
                   <td>{field.isDeleted ? 'true' : 'false'}</td>
                   <td>{field.createdBy}</td>
