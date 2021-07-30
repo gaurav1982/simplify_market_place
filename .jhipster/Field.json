@@ -12,7 +12,7 @@
     {
       "fieldName": "fieldType",
       "fieldType": "FieldType",
-      "fieldValues": "String,Date,Integer,Rate,Email"
+      "fieldValues": "Text,Date,Number,Rate,Email"
     },
     {
       "fieldName": "isDeleted",

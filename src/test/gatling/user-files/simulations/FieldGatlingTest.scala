@@ -73,7 +73,7 @@ class FieldGatlingTest extends Simulation {
             .body(StringBody("""{
                 "fieldName":"SAMPLE_TEXT"
                 , "fieldLabel":"SAMPLE_TEXT"
-                , "fieldType":"String"
+                , "fieldType":"Text"
                 , "isDeleted":null
                 , "createdBy":"SAMPLE_TEXT"
                 , "createdAt":"2020-01-01T00:00:00.000Z"

@@ -62,7 +62,7 @@ export const FieldUpdate = (props: RouteComponentProps<{ id: string }>) => {
       ? {}
       : {
           ...fieldEntity,
-          fieldType: 'String',
+          fieldType: 'Text',
           categories: fieldEntity?.categories?.map(e => e.id.toString()),
         };
 
@@ -112,9 +112,9 @@ export const FieldUpdate = (props: RouteComponentProps<{ id: string }>) => {
                 data-cy="fieldType"
                 type="select"
               >
-                <option value="String">{translate('simplifyMarketplaceApp.FieldType.String')}</option>
+                <option value="Text">{translate('simplifyMarketplaceApp.FieldType.Text')}</option>
                 <option value="Date">{translate('simplifyMarketplaceApp.FieldType.Date')}</option>
-                <option value="Integer">{translate('simplifyMarketplaceApp.FieldType.Integer')}</option>
+                <option value="Number">{translate('simplifyMarketplaceApp.FieldType.Number')}</option>
                 <option value="Rate">{translate('simplifyMarketplaceApp.FieldType.Rate')}</option>
                 <option value="Email">{translate('simplifyMarketplaceApp.FieldType.Email')}</option>
               </ValidatedField>
