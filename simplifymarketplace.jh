@@ -11,7 +11,7 @@ entity Category {
 
 }
 enum CategoryType{
-	Driver
+	Driver,
     Nurse
     
 }
@@ -22,7 +22,7 @@ relationship OneToMany {
 entity Field {
     fieldName String,
     fieldLabel String,
-    fieldType FieldType,
+    fieldType FieldType1,
     isDeleted Boolean,
     createdBy String,
     createdAt LocalDate,
@@ -30,7 +30,7 @@ entity Field {
     updatedAt LocalDate
 }
 
-enum FieldType {
+enum FieldType1 {
 	Text,
     Date,
     Number,
