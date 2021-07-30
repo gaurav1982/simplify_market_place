@@ -31,10 +31,10 @@ entity Field {
 }
 
 enum FieldType {
-	String
-    Date
-    Integer
-    Rate
+	Text,
+    Date,
+    Number,
+    Rate,
     Email
 }
 

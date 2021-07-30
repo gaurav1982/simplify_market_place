@@ -49,7 +49,7 @@ class FieldResourceIT {
     private static final String DEFAULT_FIELD_LABEL = "AAAAAAAAAA";
     private static final String UPDATED_FIELD_LABEL = "BBBBBBBBBB";
 
-    private static final FieldType DEFAULT_FIELD_TYPE = FieldType.String;
+    private static final FieldType DEFAULT_FIELD_TYPE = FieldType.Text;
     private static final FieldType UPDATED_FIELD_TYPE = FieldType.Date;
 
     private static final Boolean DEFAULT_IS_DELETED = false;

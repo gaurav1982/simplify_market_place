@@ -1,9 +1,9 @@
 export enum FieldType {
-  String = 'String',
+  Text = 'Text',
 
   Date = 'Date',
 
-  Integer = 'Integer',
+  Number = 'Number',
 
   Rate = 'Rate',
 
