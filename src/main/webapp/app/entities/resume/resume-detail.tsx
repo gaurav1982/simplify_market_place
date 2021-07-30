@@ -82,9 +82,9 @@ export const ResumeDetail = (props: RouteComponentProps<{ id: string }>) => {
             {resumeEntity.updatedAt ? <TextFormat value={resumeEntity.updatedAt} type="date" format={APP_LOCAL_DATE_FORMAT} /> : null}
           </dd>
           <dt>
-            <Translate contentKey="simplifyMarketplaceApp.resume.id">Id</Translate>
+            <Translate contentKey="simplifyMarketplaceApp.resume.worker">Worker</Translate>
           </dt>
-          <dd>{resumeEntity.id ? resumeEntity.id.id : ''}</dd>
+          <dd>{resumeEntity.worker ? resumeEntity.worker.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/resume" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

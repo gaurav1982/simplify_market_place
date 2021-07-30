@@ -38,31 +38,31 @@
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "resume",
-      "otherEntityRelationshipName": "id",
+      "otherEntityRelationshipName": "worker",
       "relationshipName": "resume"
     },
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "jobPreference",
-      "otherEntityRelationshipName": "id",
-      "relationshipName": "jobPreference"
+      "otherEntityRelationshipName": "worker",
+      "relationshipName": "jobprefrence"
     },
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "locationPrefrence",
-      "otherEntityRelationshipName": "id",
-      "relationshipName": "locationPrefrence"
+      "otherEntityRelationshipName": "worker",
+      "relationshipName": "locationprefrence"
     },
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "education",
-      "otherEntityRelationshipName": "id",
+      "otherEntityRelationshipName": "worker",
       "relationshipName": "education"
     },
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "employment",
-      "otherEntityRelationshipName": "id",
+      "otherEntityRelationshipName": "worker",
       "relationshipName": "employment"
     }
   ],

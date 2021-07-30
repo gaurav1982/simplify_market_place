@@ -47,7 +47,7 @@ export const LocationPrefrenceUpdate = (props: RouteComponentProps<{ id: string 
     const entity = {
       ...locationPrefrenceEntity,
       ...values,
-      id: workers.find(it => it.id.toString() === values.idId.toString()),
+      worker: workers.find(it => it.id.toString() === values.workerId.toString()),
     };
 
     if (isNew) {
@@ -62,7 +62,7 @@ export const LocationPrefrenceUpdate = (props: RouteComponentProps<{ id: string 
       ? {}
       : {
           ...locationPrefrenceEntity,
-          idId: locationPrefrenceEntity?.id?.id,
+          workerId: locationPrefrenceEntity?.worker?.id,
         };
 
   return (
@@ -100,10 +100,10 @@ export const LocationPrefrenceUpdate = (props: RouteComponentProps<{ id: string 
                 type="text"
               />
               <ValidatedField
-                id="location-prefrence-id"
-                name="idId"
-                data-cy="id"
-                label={translate('simplifyMarketplaceApp.locationPrefrence.id')}
+                id="location-prefrence-worker"
+                name="workerId"
+                data-cy="worker"
+                label={translate('simplifyMarketplaceApp.locationPrefrence.worker')}
                 type="select"
               >
                 <option value="" key="0" />

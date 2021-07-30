@@ -27,7 +27,7 @@
       "updatedBy": "Updated By",
       "updatedAt": "Updated At",
       "category": "Category",
-      "jobPreference": "Job Preference",
+      "jobprefrence": "Jobprefrence",
       "parent": "Parent",
       "field": "Field"
     }

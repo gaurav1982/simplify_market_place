@@ -44,7 +44,7 @@
             <column name="updated_at" type="date">
                 <constraints nullable="true" />
             </column>
-            <column name="id_id" type="bigint">
+            <column name="worker_id" type="bigint">
                 <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
@@ -53,8 +53,8 @@
 
     <changeSet id="20210729120246-1-relations" author="jhipster">
 
-        <createTable tableName="rel_employment__id">
-            <column name="id_id" type="bigint">
+        <createTable tableName="rel_employment__location">
+            <column name="location_id" type="bigint">
                 <constraints nullable="false"/>
             </column>
             <column name="employment_id" type="bigint">
@@ -62,7 +62,7 @@
             </column>
         </createTable>
 
-        <addPrimaryKey columnNames="employment_id, id_id" tableName="rel_employment__id"/>
+        <addPrimaryKey columnNames="employment_id, location_id" tableName="rel_employment__location"/>
     </changeSet>
 
     <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->

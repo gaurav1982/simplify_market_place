@@ -40,7 +40,7 @@
       "relationshipType": "many-to-one",
       "otherEntityName": "worker",
       "otherEntityRelationshipName": "resume",
-      "relationshipName": "id"
+      "relationshipName": "worker"
     }
   ],
   "entityTableName": "resume",

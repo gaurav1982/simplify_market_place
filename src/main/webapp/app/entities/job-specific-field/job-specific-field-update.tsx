@@ -47,7 +47,7 @@ export const JobSpecificFieldUpdate = (props: RouteComponentProps<{ id: string }
     const entity = {
       ...jobSpecificFieldEntity,
       ...values,
-      id: jobPreferences.find(it => it.id.toString() === values.idId.toString()),
+      jobpreference: jobPreferences.find(it => it.id.toString() === values.jobpreferenceId.toString()),
     };
 
     if (isNew) {
@@ -62,7 +62,7 @@ export const JobSpecificFieldUpdate = (props: RouteComponentProps<{ id: string }
       ? {}
       : {
           ...jobSpecificFieldEntity,
-          idId: jobSpecificFieldEntity?.id?.id,
+          jobpreferenceId: jobSpecificFieldEntity?.jobpreference?.id,
         };
 
   return (
@@ -100,10 +100,10 @@ export const JobSpecificFieldUpdate = (props: RouteComponentProps<{ id: string }
                 type="text"
               />
               <ValidatedField
-                id="job-specific-field-id"
-                name="idId"
-                data-cy="id"
-                label={translate('simplifyMarketplaceApp.jobSpecificField.id')}
+                id="job-specific-field-jobpreference"
+                name="jobpreferenceId"
+                data-cy="jobpreference"
+                label={translate('simplifyMarketplaceApp.jobSpecificField.jobpreference')}
                 type="select"
               >
                 <option value="" key="0" />

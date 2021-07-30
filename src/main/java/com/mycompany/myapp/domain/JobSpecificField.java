@@ -26,8 +26,8 @@ public class JobSpecificField implements Serializable {
     private String value;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "jobSpecificFields", "id", "id" }, allowSetters = true)
-    private JobPreference id;
+    @JsonIgnoreProperties(value = { "jobspecificfields", "worker", "category" }, allowSetters = true)
+    private JobPreference jobpreference;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -56,17 +56,17 @@ public class JobSpecificField implements Serializable {
         this.value = value;
     }
 
-    public JobPreference getId() {
-        return this.id;
+    public JobPreference getJobpreference() {
+        return this.jobpreference;
     }
 
-    public JobSpecificField id(JobPreference jobPreference) {
-        this.setId(jobPreference);
+    public JobSpecificField jobpreference(JobPreference jobPreference) {
+        this.setJobpreference(jobPreference);
         return this;
     }
 
-    public void setId(JobPreference jobPreference) {
-        this.id = jobPreference;
+    public void setJobpreference(JobPreference jobPreference) {
+        this.jobpreference = jobPreference;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

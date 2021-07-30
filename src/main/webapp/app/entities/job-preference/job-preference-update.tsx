@@ -51,8 +51,8 @@ export const JobPreferenceUpdate = (props: RouteComponentProps<{ id: string }>) 
     const entity = {
       ...jobPreferenceEntity,
       ...values,
-      id: workers.find(it => it.id.toString() === values.idId.toString()),
-      id: categories.find(it => it.id.toString() === values.idId.toString()),
+      worker: workers.find(it => it.id.toString() === values.workerId.toString()),
+      category: categories.find(it => it.id.toString() === values.categoryId.toString()),
     };
 
     if (isNew) {
@@ -69,8 +69,8 @@ export const JobPreferenceUpdate = (props: RouteComponentProps<{ id: string }>) 
           ...jobPreferenceEntity,
           engagementType: 'FullTime',
           locationType: 'Worklocation',
-          idId: jobPreferenceEntity?.id?.id,
-          idId: jobPreferenceEntity?.id?.id,
+          workerId: jobPreferenceEntity?.worker?.id,
+          categoryId: jobPreferenceEntity?.category?.id,
         };
 
   return (
@@ -183,10 +183,10 @@ export const JobPreferenceUpdate = (props: RouteComponentProps<{ id: string }>) 
                 type="date"
               />
               <ValidatedField
-                id="job-preference-id"
-                name="idId"
-                data-cy="id"
-                label={translate('simplifyMarketplaceApp.jobPreference.id')}
+                id="job-preference-worker"
+                name="workerId"
+                data-cy="worker"
+                label={translate('simplifyMarketplaceApp.jobPreference.worker')}
                 type="select"
               >
                 <option value="" key="0" />
@@ -199,10 +199,10 @@ export const JobPreferenceUpdate = (props: RouteComponentProps<{ id: string }>) 
                   : null}
               </ValidatedField>
               <ValidatedField
-                id="job-preference-id"
-                name="idId"
-                data-cy="id"
-                label={translate('simplifyMarketplaceApp.jobPreference.id')}
+                id="job-preference-category"
+                name="categoryId"
+                data-cy="category"
+                label={translate('simplifyMarketplaceApp.jobPreference.category')}
                 type="select"
               >
                 <option value="" key="0" />

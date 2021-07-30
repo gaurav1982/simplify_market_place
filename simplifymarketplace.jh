@@ -92,7 +92,7 @@ enum FileType {
     PPT
 }
 relationship OneToMany {
-    Worker to Resume {id}
+    Worker {resume} to Resume {worker}
 }
 entity JobPreference {
     hourlyRate Integer,
@@ -123,16 +123,16 @@ entity JobSpecificField {
  value String
 }
 relationship OneToMany {
-    JobPreference to JobSpecificField {id},
+    JobPreference {jobspecificfield} to JobSpecificField {jobpreference},
 }
 
 
 relationship OneToMany {
-    Worker to JobPreference {id}
+    Worker {jobprefrence} to JobPreference {worker}
 }
 
 relationship OneToMany {
-    Category to JobPreference {id}
+    Category {jobprefrence} to JobPreference {category}
 }
 
 entity Location {
@@ -146,11 +146,11 @@ prefrenceOrder Integer
 }
 
 relationship OneToMany {
-    Worker to LocationPrefrence {id}
+    Worker {locationprefrence} to LocationPrefrence {worker}
 }
 
 relationship OneToMany {
-    Client to Location {id}
+    Client {location} to Location {client}
 }
 
 entity Education {
@@ -178,7 +178,7 @@ enum DegreeType {
 }
 
 relationship OneToMany {
-    Worker to Education {id}
+    Worker {education} to Education {worker}
 }
 
 entity Employment {
@@ -194,10 +194,10 @@ entity Employment {
     updatedAt LocalDate
 }
 relationship OneToMany {
-    Worker to Employment {id}
+    Worker {employment} to Employment {worker}
 }
 relationship ManyToMany {
-    Employment {id} to Location {id}
+    Employment {location} to Location {employment}
 }
 
 entity OTP {

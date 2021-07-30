@@ -125,7 +125,7 @@ export const Education = (props: RouteComponentProps<{ url: string }>) => {
                   <Translate contentKey="simplifyMarketplaceApp.education.updatedAt">Updated At</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="simplifyMarketplaceApp.education.id">Id</Translate>
+                  <Translate contentKey="simplifyMarketplaceApp.education.worker">Worker</Translate>
                 </th>
                 <th />
               </tr>
@@ -158,7 +158,7 @@ export const Education = (props: RouteComponentProps<{ url: string }>) => {
                   <td>
                     {education.updatedAt ? <TextFormat type="date" value={education.updatedAt} format={APP_LOCAL_DATE_FORMAT} /> : null}
                   </td>
-                  <td>{education.id ? <Link to={`worker/${education.id.id}`}>{education.id.id}</Link> : ''}</td>
+                  <td>{education.worker ? <Link to={`worker/${education.worker.id}`}>{education.worker.id}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${education.id}`} color="info" size="sm" data-cy="entityDetailsButton">

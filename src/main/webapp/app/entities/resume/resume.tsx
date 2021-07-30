@@ -113,7 +113,7 @@ export const Resume = (props: RouteComponentProps<{ url: string }>) => {
                   <Translate contentKey="simplifyMarketplaceApp.resume.updatedAt">Updated At</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="simplifyMarketplaceApp.resume.id">Id</Translate>
+                  <Translate contentKey="simplifyMarketplaceApp.resume.worker">Worker</Translate>
                 </th>
                 <th />
               </tr>
@@ -136,7 +136,7 @@ export const Resume = (props: RouteComponentProps<{ url: string }>) => {
                   <td>{resume.createdAt ? <TextFormat type="date" value={resume.createdAt} format={APP_LOCAL_DATE_FORMAT} /> : null}</td>
                   <td>{resume.updatedBy}</td>
                   <td>{resume.updatedAt ? <TextFormat type="date" value={resume.updatedAt} format={APP_LOCAL_DATE_FORMAT} /> : null}</td>
-                  <td>{resume.id ? <Link to={`worker/${resume.id.id}`}>{resume.id.id}</Link> : ''}</td>
+                  <td>{resume.worker ? <Link to={`worker/${resume.worker.id}`}>{resume.worker.id}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${resume.id}`} color="info" size="sm" data-cy="entityDetailsButton">

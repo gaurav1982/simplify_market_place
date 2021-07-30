@@ -48,9 +48,9 @@ export const LocationDetail = (props: RouteComponentProps<{ id: string }>) => {
           </dt>
           <dd>{locationEntity.city}</dd>
           <dt>
-            <Translate contentKey="simplifyMarketplaceApp.location.id">Id</Translate>
+            <Translate contentKey="simplifyMarketplaceApp.location.client">Client</Translate>
           </dt>
-          <dd>{locationEntity.id ? locationEntity.id.id : ''}</dd>
+          <dd>{locationEntity.client ? locationEntity.client.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/location" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

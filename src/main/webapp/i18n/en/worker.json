@@ -28,8 +28,8 @@
       "updatedBy": "Updated By",
       "updatedAt": "Updated At",
       "resume": "Resume",
-      "jobPreference": "Job Preference",
-      "locationPrefrence": "Location Prefrence",
+      "jobprefrence": "Jobprefrence",
+      "locationprefrence": "Locationprefrence",
       "education": "Education",
       "employment": "Employment"
     }

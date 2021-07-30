@@ -15,14 +15,14 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EmploymentRepository extends JpaRepository<Employment, Long> {
     @Query(
-        value = "select distinct employment from Employment employment left join fetch employment.ids",
+        value = "select distinct employment from Employment employment left join fetch employment.locations",
         countQuery = "select count(distinct employment) from Employment employment"
     )
     Page<Employment> findAllWithEagerRelationships(Pageable pageable);
 
-    @Query("select distinct employment from Employment employment left join fetch employment.ids")
+    @Query("select distinct employment from Employment employment left join fetch employment.locations")
     List<Employment> findAllWithEagerRelationships();
 
-    @Query("select employment from Employment employment left join fetch employment.ids where employment.id =:id")
+    @Query("select employment from Employment employment left join fetch employment.locations where employment.id =:id")
     Optional<Employment> findOneWithEagerRelationships(@Param("id") Long id);
 }

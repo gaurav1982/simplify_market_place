@@ -47,7 +47,7 @@ export const ResumeUpdate = (props: RouteComponentProps<{ id: string }>) => {
     const entity = {
       ...resumeEntity,
       ...values,
-      id: workers.find(it => it.id.toString() === values.idId.toString()),
+      worker: workers.find(it => it.id.toString() === values.workerId.toString()),
     };
 
     if (isNew) {
@@ -63,7 +63,7 @@ export const ResumeUpdate = (props: RouteComponentProps<{ id: string }>) => {
       : {
           ...resumeEntity,
           filetype: 'PDF',
-          idId: resumeEntity?.id?.id,
+          workerId: resumeEntity?.worker?.id,
         };
 
   return (
@@ -152,7 +152,13 @@ export const ResumeUpdate = (props: RouteComponentProps<{ id: string }>) => {
                 data-cy="updatedAt"
                 type="date"
               />
-              <ValidatedField id="resume-id" name="idId" data-cy="id" label={translate('simplifyMarketplaceApp.resume.id')} type="select">
+              <ValidatedField
+                id="resume-worker"
+                name="workerId"
+                data-cy="worker"
+                label={translate('simplifyMarketplaceApp.resume.worker')}
+                type="select"
+              >
                 <option value="" key="0" />
                 {workers
                   ? workers.map(otherEntity => (

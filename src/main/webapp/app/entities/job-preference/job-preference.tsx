@@ -122,10 +122,10 @@ export const JobPreference = (props: RouteComponentProps<{ url: string }>) => {
                   <Translate contentKey="simplifyMarketplaceApp.jobPreference.updatedAt">Updated At</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="simplifyMarketplaceApp.jobPreference.id">Id</Translate>
+                  <Translate contentKey="simplifyMarketplaceApp.jobPreference.worker">Worker</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="simplifyMarketplaceApp.jobPreference.id">Id</Translate>
+                  <Translate contentKey="simplifyMarketplaceApp.jobPreference.category">Category</Translate>
                 </th>
                 <th />
               </tr>
@@ -161,8 +161,10 @@ export const JobPreference = (props: RouteComponentProps<{ url: string }>) => {
                       <TextFormat type="date" value={jobPreference.updatedAt} format={APP_LOCAL_DATE_FORMAT} />
                     ) : null}
                   </td>
-                  <td>{jobPreference.id ? <Link to={`worker/${jobPreference.id.id}`}>{jobPreference.id.id}</Link> : ''}</td>
-                  <td>{jobPreference.id ? <Link to={`category/${jobPreference.id.id}`}>{jobPreference.id.id}</Link> : ''}</td>
+                  <td>{jobPreference.worker ? <Link to={`worker/${jobPreference.worker.id}`}>{jobPreference.worker.id}</Link> : ''}</td>
+                  <td>
+                    {jobPreference.category ? <Link to={`category/${jobPreference.category.id}`}>{jobPreference.category.id}</Link> : ''}
+                  </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${jobPreference.id}`} color="info" size="sm" data-cy="entityDetailsButton">

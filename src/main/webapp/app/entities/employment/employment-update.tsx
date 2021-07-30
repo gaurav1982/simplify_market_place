@@ -51,8 +51,8 @@ export const EmploymentUpdate = (props: RouteComponentProps<{ id: string }>) => 
     const entity = {
       ...employmentEntity,
       ...values,
-      ids: mapIdList(values.ids),
-      id: workers.find(it => it.id.toString() === values.idId.toString()),
+      locations: mapIdList(values.locations),
+      worker: workers.find(it => it.id.toString() === values.workerId.toString()),
     };
 
     if (isNew) {
@@ -67,8 +67,8 @@ export const EmploymentUpdate = (props: RouteComponentProps<{ id: string }>) => 
       ? {}
       : {
           ...employmentEntity,
-          ids: employmentEntity?.ids?.map(e => e.id.toString()),
-          idId: employmentEntity?.id?.id,
+          locations: employmentEntity?.locations?.map(e => e.id.toString()),
+          workerId: employmentEntity?.worker?.id,
         };
 
   return (
@@ -167,12 +167,12 @@ export const EmploymentUpdate = (props: RouteComponentProps<{ id: string }>) => 
                 type="date"
               />
               <ValidatedField
-                label={translate('simplifyMarketplaceApp.employment.id')}
-                id="employment-id"
-                data-cy="id"
+                label={translate('simplifyMarketplaceApp.employment.location')}
+                id="employment-location"
+                data-cy="location"
                 type="select"
                 multiple
-                name="ids"
+                name="locations"
               >
                 <option value="" key="0" />
                 {locations
@@ -184,10 +184,10 @@ export const EmploymentUpdate = (props: RouteComponentProps<{ id: string }>) => 
                   : null}
               </ValidatedField>
               <ValidatedField
-                id="employment-id"
-                name="idId"
-                data-cy="id"
-                label={translate('simplifyMarketplaceApp.employment.id')}
+                id="employment-worker"
+                name="workerId"
+                data-cy="worker"
+                label={translate('simplifyMarketplaceApp.employment.worker')}
                 type="select"
               >
                 <option value="" key="0" />

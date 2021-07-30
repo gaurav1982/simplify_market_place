@@ -14,8 +14,8 @@ export interface IEmployment {
   createdAt?: string | null;
   updatedBy?: string | null;
   updatedAt?: string | null;
-  ids?: ILocation[] | null;
-  id?: IWorker | null;
+  locations?: ILocation[] | null;
+  worker?: IWorker | null;
 }
 
 export const defaultValue: Readonly<IEmployment> = {};

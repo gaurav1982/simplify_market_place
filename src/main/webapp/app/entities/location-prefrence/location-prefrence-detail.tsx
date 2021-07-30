@@ -36,9 +36,9 @@ export const LocationPrefrenceDetail = (props: RouteComponentProps<{ id: string 
           </dt>
           <dd>{locationPrefrenceEntity.prefrenceOrder}</dd>
           <dt>
-            <Translate contentKey="simplifyMarketplaceApp.locationPrefrence.id">Id</Translate>
+            <Translate contentKey="simplifyMarketplaceApp.locationPrefrence.worker">Worker</Translate>
           </dt>
-          <dd>{locationPrefrenceEntity.id ? locationPrefrenceEntity.id.id : ''}</dd>
+          <dd>{locationPrefrenceEntity.worker ? locationPrefrenceEntity.worker.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/location-prefrence" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}

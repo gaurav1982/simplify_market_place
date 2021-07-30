@@ -26,8 +26,8 @@ public class LocationPrefrence implements Serializable {
     private Integer prefrenceOrder;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "resumes", "jobPreferences", "locationPrefrences", "educations", "employments" }, allowSetters = true)
-    private Worker id;
+    @JsonIgnoreProperties(value = { "resumes", "jobprefrences", "locationprefrences", "educations", "employments" }, allowSetters = true)
+    private Worker worker;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -56,17 +56,17 @@ public class LocationPrefrence implements Serializable {
         this.prefrenceOrder = prefrenceOrder;
     }
 
-    public Worker getId() {
-        return this.id;
+    public Worker getWorker() {
+        return this.worker;
     }
 
-    public LocationPrefrence id(Worker worker) {
-        this.setId(worker);
+    public LocationPrefrence worker(Worker worker) {
+        this.setWorker(worker);
         return this;
     }
 
-    public void setId(Worker worker) {
-        this.id = worker;
+    public void setWorker(Worker worker) {
+        this.worker = worker;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

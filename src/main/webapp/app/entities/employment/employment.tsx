@@ -119,10 +119,10 @@ export const Employment = (props: RouteComponentProps<{ url: string }>) => {
                   <Translate contentKey="simplifyMarketplaceApp.employment.updatedAt">Updated At</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="simplifyMarketplaceApp.employment.id">Id</Translate>
+                  <Translate contentKey="simplifyMarketplaceApp.employment.location">Location</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="simplifyMarketplaceApp.employment.id">Id</Translate>
+                  <Translate contentKey="simplifyMarketplaceApp.employment.worker">Worker</Translate>
                 </th>
                 <th />
               </tr>
@@ -154,16 +154,16 @@ export const Employment = (props: RouteComponentProps<{ url: string }>) => {
                     {employment.updatedAt ? <TextFormat type="date" value={employment.updatedAt} format={APP_LOCAL_DATE_FORMAT} /> : null}
                   </td>
                   <td>
-                    {employment.ids
-                      ? employment.ids.map((val, j) => (
+                    {employment.locations
+                      ? employment.locations.map((val, j) => (
                           <span key={j}>
                             <Link to={`location/${val.id}`}>{val.id}</Link>
-                            {j === employment.ids.length - 1 ? '' : ', '}
+                            {j === employment.locations.length - 1 ? '' : ', '}
                           </span>
                         ))
                       : null}
                   </td>
-                  <td>{employment.id ? <Link to={`worker/${employment.id.id}`}>{employment.id.id}</Link> : ''}</td>
+                  <td>{employment.worker ? <Link to={`worker/${employment.worker.id}`}>{employment.worker.id}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${employment.id}`} color="info" size="sm" data-cy="entityDetailsButton">

@@ -98,7 +98,7 @@ export const Location = (props: RouteComponentProps<{ url: string }>) => {
                   <Translate contentKey="simplifyMarketplaceApp.location.city">City</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="simplifyMarketplaceApp.location.id">Id</Translate>
+                  <Translate contentKey="simplifyMarketplaceApp.location.client">Client</Translate>
                 </th>
                 <th />
               </tr>
@@ -114,7 +114,7 @@ export const Location = (props: RouteComponentProps<{ url: string }>) => {
                   <td>{location.country}</td>
                   <td>{location.state}</td>
                   <td>{location.city}</td>
-                  <td>{location.id ? <Link to={`client/${location.id.id}`}>{location.id.id}</Link> : ''}</td>
+                  <td>{location.client ? <Link to={`client/${location.client.id}`}>{location.client.id}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${location.id}`} color="info" size="sm" data-cy="entityDetailsButton">

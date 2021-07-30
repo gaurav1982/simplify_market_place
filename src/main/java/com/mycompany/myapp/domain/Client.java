@@ -54,9 +54,9 @@ public class Client implements Serializable {
     @Column(name = "updated_at")
     private LocalDate updatedAt;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "client")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "id", "ids" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "client", "employments" }, allowSetters = true)
     private Set<Location> locations = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
@@ -201,22 +201,22 @@ public class Client implements Serializable {
 
     public Client addLocation(Location location) {
         this.locations.add(location);
-        location.setId(this);
+        location.setClient(this);
         return this;
     }
 
     public Client removeLocation(Location location) {
         this.locations.remove(location);
-        location.setId(null);
+        location.setClient(null);
         return this;
     }
 
     public void setLocations(Set<Location> locations) {
         if (this.locations != null) {
-            this.locations.forEach(i -> i.setId(null));
+            this.locations.forEach(i -> i.setClient(null));
         }
         if (locations != null) {
-            locations.forEach(i -> i.setId(this));
+            locations.forEach(i -> i.setClient(this));
         }
         this.locations = locations;
     }

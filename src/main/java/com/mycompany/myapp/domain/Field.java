@@ -58,7 +58,7 @@ public class Field implements Serializable {
         joinColumns = @JoinColumn(name = "field_id"),
         inverseJoinColumns = @JoinColumn(name = "category_id")
     )
-    @JsonIgnoreProperties(value = { "categories", "jobPreferences", "parent", "fields" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "categories", "jobprefrences", "parent", "fields" }, allowSetters = true)
     private Set<Category> categories = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here

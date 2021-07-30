@@ -16,8 +16,8 @@ export interface IWorker {
   updatedBy?: string | null;
   updatedAt?: string | null;
   resumes?: IResume[] | null;
-  jobPreferences?: IJobPreference[] | null;
-  locationPrefrences?: ILocationPrefrence[] | null;
+  jobprefrences?: IJobPreference[] | null;
+  locationprefrences?: ILocationPrefrence[] | null;
   educations?: IEducation[] | null;
   employments?: IEmployment[] | null;
 }

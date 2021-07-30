@@ -62,18 +62,18 @@ public class JobPreference implements Serializable {
     @Column(name = "updated_at")
     private LocalDate updatedAt;
 
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "jobpreference")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "id" }, allowSetters = true)
-    private Set<JobSpecificField> jobSpecificFields = new HashSet<>();
+    @JsonIgnoreProperties(value = { "jobpreference" }, allowSetters = true)
+    private Set<JobSpecificField> jobspecificfields = new HashSet<>();
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "resumes", "jobPreferences", "locationPrefrences", "educations", "employments" }, allowSetters = true)
-    private Worker id;
+    @JsonIgnoreProperties(value = { "resumes", "jobprefrences", "locationprefrences", "educations", "employments" }, allowSetters = true)
+    private Worker worker;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "categories", "jobPreferences", "parent", "fields" }, allowSetters = true)
-    private Category id;
+    @JsonIgnoreProperties(value = { "categories", "jobprefrences", "parent", "fields" }, allowSetters = true)
+    private Category category;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -232,61 +232,61 @@ public class JobPreference implements Serializable {
         this.updatedAt = updatedAt;
     }
 
-    public Set<JobSpecificField> getJobSpecificFields() {
-        return this.jobSpecificFields;
+    public Set<JobSpecificField> getJobspecificfields() {
+        return this.jobspecificfields;
     }
 
-    public JobPreference jobSpecificFields(Set<JobSpecificField> jobSpecificFields) {
-        this.setJobSpecificFields(jobSpecificFields);
+    public JobPreference jobspecificfields(Set<JobSpecificField> jobSpecificFields) {
+        this.setJobspecificfields(jobSpecificFields);
         return this;
     }
 
-    public JobPreference addJobSpecificField(JobSpecificField jobSpecificField) {
-        this.jobSpecificFields.add(jobSpecificField);
-        jobSpecificField.setId(this);
+    public JobPreference addJobspecificfield(JobSpecificField jobSpecificField) {
+        this.jobspecificfields.add(jobSpecificField);
+        jobSpecificField.setJobpreference(this);
         return this;
     }
 
-    public JobPreference removeJobSpecificField(JobSpecificField jobSpecificField) {
-        this.jobSpecificFields.remove(jobSpecificField);
-        jobSpecificField.setId(null);
+    public JobPreference removeJobspecificfield(JobSpecificField jobSpecificField) {
+        this.jobspecificfields.remove(jobSpecificField);
+        jobSpecificField.setJobpreference(null);
         return this;
     }
 
-    public void setJobSpecificFields(Set<JobSpecificField> jobSpecificFields) {
-        if (this.jobSpecificFields != null) {
-            this.jobSpecificFields.forEach(i -> i.setId(null));
+    public void setJobspecificfields(Set<JobSpecificField> jobSpecificFields) {
+        if (this.jobspecificfields != null) {
+            this.jobspecificfields.forEach(i -> i.setJobpreference(null));
         }
         if (jobSpecificFields != null) {
-            jobSpecificFields.forEach(i -> i.setId(this));
+            jobSpecificFields.forEach(i -> i.setJobpreference(this));
         }
-        this.jobSpecificFields = jobSpecificFields;
+        this.jobspecificfields = jobSpecificFields;
     }
 
-    public Worker getId() {
-        return this.id;
+    public Worker getWorker() {
+        return this.worker;
     }
 
-    public JobPreference id(Worker worker) {
-        this.setId(worker);
+    public JobPreference worker(Worker worker) {
+        this.setWorker(worker);
         return this;
     }
 
-    public void setId(Worker worker) {
-        this.id = worker;
+    public void setWorker(Worker worker) {
+        this.worker = worker;
     }
 
-    public Category getId() {
-        return this.id;
+    public Category getCategory() {
+        return this.category;
     }
 
-    public JobPreference id(Category category) {
-        this.setId(category);
+    public JobPreference category(Category category) {
+        this.setCategory(category);
         return this;
     }
 
-    public void setId(Category category) {
-        this.id = category;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
